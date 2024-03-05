@@ -1,6 +1,9 @@
 from flask import Flask
 import json
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 data = [1,2,3,45]
 
