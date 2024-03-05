@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-data = [1,2,3,45]
+data = {"num":[1,2,3,45]}
 
 @app.route('/')
 def hello():
@@ -13,7 +13,7 @@ def hello():
 
 @app.route('/get_data')
 def get_data():
-    return json.dumps({data})
+    return json.dumps(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
